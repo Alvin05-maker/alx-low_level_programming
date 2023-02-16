@@ -1,1 +1,1 @@
-print line using printf function
+size of data types
