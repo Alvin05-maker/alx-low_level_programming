@@ -1,1 +1,1 @@
-prints the last digit of a random number
+prints alphabet in lowercase
