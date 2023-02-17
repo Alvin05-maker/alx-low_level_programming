@@ -1,1 +1,1 @@
-prints single digits from 0 using the putchar function
+print lowercase alphabets in reverse
