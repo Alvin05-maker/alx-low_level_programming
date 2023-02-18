@@ -1,1 +1,1 @@
-combination of two single digits
+combination of 3 single letters
