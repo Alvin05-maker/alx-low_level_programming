@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 /**
- * _islower(int c) - checks for lowercase characters
+ * _islower - checks for lowercase characters
  *
  * Return: return 1 if c is lowercase 0 otherwise
  */
