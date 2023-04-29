@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * main - prints its own opcodes
  * @argc: number of arguments
@@ -9,6 +10,7 @@ int main(int argc, char *argv[])
 {
 	int bytes, i;
 	char *arr;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
