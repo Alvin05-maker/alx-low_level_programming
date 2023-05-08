@@ -19,7 +19,7 @@ char *create_buf(char *file)
 
 	if (buf == NULL)
 	{
-		dprintf(STDERR_FILENO,"Error: Can't write to %s\n", file);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
 		exit(99);
 	}
 	return (buf);
@@ -68,29 +68,25 @@ int main(int argc, char *argv[])
 	rd = read(fd1, buf, 1024);
 	fd2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
-	do
-	{
+	do {
 		if (fd1 == -1 || fd2 == -1)
 		{
-			dprintf(STDERR_FILENO, 
-					"Error: Can't read from file %s\n", argv[1]);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			free(buf);
 			exit(98);
 		}
 		wt = write(fd2, buf, rd);
 		if (fd2 == -1 || wt == -1)
 		{
-			dprintf(STDERR_FILENO,
-				"Error: Can't write to %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			free(buf);
-				exit(99);
+			exit(99);
 		}
 		rd = read(fd1, buf, 1024);
 		fd2 = open(argv[2], O_WRONLY | O_APPEND);
-	}while (0 < rd);
+	} while (rd > 0);
 	free(buf);
 	close_file(fd1);
 	close_file(fd2);
-
 	return (0);
 }
