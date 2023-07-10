@@ -9,7 +9,7 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int fd, bytes_written, longi;
+	int fd, bytesWritten, longi;
 
 	if (filename == NULL)
 	{
@@ -24,8 +24,8 @@ int create_file(const char *filename, char *text_content)
 	{
 		longi = strlen(text_content);
 	}
-	bytes_written = write(fd, text_content, longi);
-	if (bytes_written != longi)
+	bytesWritten = write(fd, text_content, longi);
+	if (bytesWritten != longi)
 	{
 		close(fd);
 		return (-1);
