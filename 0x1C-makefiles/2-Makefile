@@ -8,4 +8,4 @@ all: $(OBJ)
 %.O : %.c
 	$(CC)	-c $<
 clean:
-	rm -rf *.o
+	rm -rf $(OBJ) $(NAME)
