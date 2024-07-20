@@ -3,7 +3,7 @@
 
 /**
  * linear search - function to search an element using linear search algorithm
- * @array: Pointer to the first elemnt of the array to search in
+ * @array: Pointer to the first element of the array to search in
  * @size: Number of elements in the array
  * @value: Value to search for
  * Return: Return the first index where the value is located
@@ -11,7 +11,7 @@
 
 int linear_search(int *array, size_t size, int value)
 {	
-	int i;
+	size_t i;
 
 	for (i = 0; i < size; i++)
 	{
