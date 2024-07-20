@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * linear search - function to search an element using linear search algorithm
+ * linear_search - function to search an element using linear search algorithm
  * @array: Pointer to the first element of the array to search in
  * @size: Number of elements in the array
  * @value: Value to search for
@@ -12,7 +12,7 @@
 int linear_search(int *array, size_t size, int value)
 {
 	int i;
-	
+
 	for (i = 0; i < (int)size; i++)
 	{
 		if (array == NULL || i == (int)size)
@@ -22,7 +22,6 @@ int linear_search(int *array, size_t size, int value)
 		else if (array[i] == value)
 		{
 			return (i);
-			break;
 		}
 		else
 		{
